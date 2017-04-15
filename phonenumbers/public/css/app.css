@@ -1,0 +1,74 @@
+.navbar-inverse{
+
+/*background-color: red;*/
+}
+
+.main{
+	margin-top:50px;
+}
+li{
+	color:red;
+}
+
+td{	
+	padding: 5px;
+	color:black;
+	font-weight: bold;
+	text-align: center;
+}
+label{
+	font-size: 15px;
+}
+
+.panel-heading{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.panel-sing .panel-heading{
+	font-size:25px;
+
+}
+.panel-sing .heading-signin{
+	background-color:#004d99;
+;
+	}
+.panel-sing .heading-signin{
+	background-color:#cce6ff;
+	}
+.submit-button{
+	font-size:12px;
+	font-weight:bold;
+}
+
+input[type="text"]{
+	width: 50%;
+	font-weight:bold;
+}
+input[type="text"].input-code{
+    width:10%;
+}
+input[type="password"]{
+	width: 50%;
+	font-weight:bold;
+}
+
+
+
+.navbar-inverse{
+	background-color: #003366;
+}
+
+.navbar-brand{
+    font-size:14px;
+    font-style:italic;
+}
+.navbar-brand:hover,li a.navbar-brand:hover{
+	text-decoration: underline;
+}
+
+td{
+	border-bottom:1px solid #e0ebeb;
+}
+.info{
+	font-size:12px;
+}

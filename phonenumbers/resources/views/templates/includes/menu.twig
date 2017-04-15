@@ -1,0 +1,38 @@
+<?php ?>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">Phone Numbers</div>
+      {% if (auth.check) %}
+      <a class="navbar-brand" href="{{ path_for('userHome') }}">Home</a>
+      {% endif %}
+    </div>
+    <!--<ul class="nav navbar-nav">
+      <li class="active"><a href="">Home</a></li>
+    </ul>-->
+    <ul class="nav navbar-nav navbar-right">
+       {% if (auth.check) %}
+      <!--<li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ auth.user.name }}<span class="caret"></span></a>
+        <ul class="dropdown-menu">-->
+          <li><a class="navbar-brand" href="{{ path_for('userPhone') }}">Insert Number</a></li>
+          <li><a class="navbar-brand" href="{{ path_for('userSignout') }}">Sign out</a></li>
+        <!--</ul>
+      </li>-->
+      {% else %}
+
+      <li><a href="{{ path_for('userSignUp') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{{ path_for('userSignIn') }}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'templates/app.twig' %}
+
+
+{% block content %}
+
+	<div class="col-md-6">
+ 		<div class="panel panel-default">
+          <div class="panel-heading">Insert Phone Number</div>
+          <div class="panel-body">
+     
+<form method="post" action="{{ path_for('userPhone') }}">
+<div class="form-group {{ errors.phone ? 'has-error' : ''}}">
+ <label for="phone">Phone Number</label>
+ <div class="input-group phone-input">
+ <div class="phone-list">
+ <input type="text" name="phone[1]" id="phone" class="form-control" placeholder="+ 389 XX XXX XXX"/>
+ </div>
+ </div>
+ {% if(errors.phone) %}
+ <span class="help-block">{{ errors.phone | first }}</span>
+ {% endif %}
+</div>
+
+<div class="form-group {{ errors.code ? 'has-error' : ''}}">
+ <label for="code">Country Code</label>
+ <input type="text" name="code" id="code" class="form-control input-code" placeholder="MK" />
+ {% if(errors.code) %}
+ <span class="help-block">{{ errors.code | first }}</span>
+ {% endif %}
+</div>
+<button type="button" class="btn btn-success btn-sm btn-add-phone"><span class="glyphicon glyphicon-plus"></span> Add Phone</button>
+<input type="hidden" name="id_user" value="{{ user_id }}" />
+<button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+</div></div></div></div>
+
+     {% endblock %}
